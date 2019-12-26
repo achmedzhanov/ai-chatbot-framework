@@ -12,6 +12,7 @@ def install_nltk_dependencies():
     download("stopwords")
     download("wordnet")
     download('averaged_perceptron_tagger')
+    download('averaged_perceptron_tagger_ru')
     download('punkt')
     print "Done"
 

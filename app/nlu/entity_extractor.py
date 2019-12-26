@@ -22,7 +22,8 @@ class EntityExtractor:
         """
         for entity in entities.keys():
 
-            entity_value = str(entities[entity])
+            #entity_value = str(entities[entity])
+            entity_value = str(entities[entity].encode('utf8'))
 
             if entity_value.lower() in self.synonyms:
                 entities[entity] = self.synonyms[entity_value.lower()]

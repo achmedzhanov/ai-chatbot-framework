@@ -1,15 +1,16 @@
 version: '2'
 services:
   iky_backend:
-    container_name: iky_backend
+    container_name: iky_backend_ru
     build: .
     environment:
       APPLICATION_ENV: Production
+      PYTHONIOENCODING: utf8
     depends_on:
       - mongodb
 
   iky_gateway:
-    container_name: iky_gateway
+    container_name: iky_gateway_ru
     build: frontend/
     ports:
         - "8080:80"
@@ -17,7 +18,7 @@ services:
       - iky_backend
 
   mongodb:
-    container_name: mongodb
+    container_name: mongodb_ru
     image: mongo
     hostname: mongodb
     ports:

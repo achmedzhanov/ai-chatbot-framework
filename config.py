@@ -1,6 +1,6 @@
 class Config(object):
     DEBUG = False
-    MONGODB_DB = "iky-ai"
+    MONGODB_DB = "iky-ai-ru"
     MONGODB_HOST = "127.0.0.1"
     MONGODB_PORT = 27017
     MONGODB_USERNAME = ""
@@ -20,7 +20,7 @@ class Development(Config):
 
 class Production(Config):
     # MongoDB Database Details
-    MONGODB_DB = "iky-ai"
+    MONGODB_DB = "iky-ai-ru"
     MONGODB_HOST = "mongodb"
     MONGODB_PORT = 27017
     MONGODB_USERNAME = ""

@@ -2,8 +2,7 @@
 
 from app import app
 from app import my_signals
-from nltk import word_tokenize
-from nltk.tag.perceptron import PerceptronTagger
+from nltk import word_tokenize, pos_tag
 from app.intents.models import Intent
 from app.nlu.classifiers.starspace_intent_classifier import \
     EmbeddingIntentClassifier
@@ -68,9 +67,6 @@ def train_all_ner(story_id, training_data):
     entityExtraction.train(ner_training_data, story_id)
 
 
-# Load and initialize Perceptron tagger
-tagger = PerceptronTagger()
-
 
 def pos_tagger(sentence):
     """
@@ -79,7 +75,7 @@ def pos_tagger(sentence):
     :return:
     """
     tokenized_sentence = word_tokenize(sentence)
-    pos_tagged_sentence = tagger.tag(tokenized_sentence)
+    pos_tagged_sentence = pos_tag(tokenized_sentence, lang='rus')
     return pos_tagged_sentence
 
 

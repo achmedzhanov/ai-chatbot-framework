@@ -10,7 +10,6 @@ mongoengine==0.15.0
 flask-mongoengine
 nltk==3.2.5
 scipy==0.19.1
-numpy==1.13.3
 pandas==0.21.1
 parsedatetime==2.4
 python-crfsuite==0.9.5
@@ -19,6 +18,9 @@ requests==2.18.4
 scikit-learn==0.19.1
 simplejson==3.13.2
 Werkzeug==0.13
+tensorflow==1.15.0
+ptvsd==4.2.10
+numpy
 gunicorn
 gevent
 pytest
@@ -26,5 +28,4 @@ cloudpickle
 flask_script
 blinker
 h5py
-spacy
-tensorflow
+spacy==2.0.12
